@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VIMPERF = "$HOME/.vimrc"
+VIMPERF="$HOME/.vimrc"
 if test -f "$VIMPERF"; then
 	echo "$VIMPERF Exists.. Deleting..."
     rm -rf  $VIMPERF
