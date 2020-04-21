@@ -1,16 +1,22 @@
 #!/bin/bash
 
 VIMPERF="$HOME/.vimrc"
+BASHRC="$HOME/.bashrc"
 if test -f "$VIMPERF"; then
-	echo "$VIMPERF Exists.. Deleting..."
-    rm -rf  $VIMPERF
-	echo "Deleted."
+	echo "$VIMPERF Exists.. moving..."
+    mv $VIMPERF $HOME/.vimrc_ORIGINAL
+	echo "Moved to $HOME/.vimrc_ORIGINAL"
 else
 	echo "No vimrc exists... Creating..."
-	cp ./.vimrc $HOME/.vimrc
-	#touch $VIMPERF
-	#echo "set number" >> $VIMPERF
-	#echo "set tabstop=4" >> $VIMPERF
-	#echo "set cursorline" >> $VIMPERF
-	echo "Done."
 fi
+
+cp ./.vimrc $HOME/.vimrc
+echo "Done."
+
+echo "Adding alias to $BASHRC ..."
+echo "alias vi=vim" >> $BASHRC
+
+echo "Done."
+echo ""
+echo "To reload, source bash_rc: source $BASHRC"
+echo ""
