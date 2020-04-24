@@ -19,10 +19,10 @@ echo "Done."
 echo "Adding alias to $BASHRC ..."
 echo "alias vi=vim" >> $BASHRC
 
-#Uncomment to add colors. This changes from the default blue which is sometimes hard to read
-echo "LS_COLORS=\$LS_COLORS:'di=0;94:';  export LS_COLORS" >> $BASHRC
+#Uncomment following lines for colors. This changes from the default blue which is sometimes hard to read
+echo "Updating LS_COLORS..."
+#echo "LS_COLORS=\$LS_COLORS:'di=0;94:';  export LS_COLORS" >> $BASHRC
 
-#
 
 echo "Done."
 echo ""
